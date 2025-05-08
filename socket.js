@@ -6,7 +6,7 @@ module.exports = {
     init: httpServer => {
         io = new Server(httpServer, {
             cors: {
-                origin: '*', // or use 'http://localhost:3000' if you want to restrict
+                origin: ['http://localhost:3000', 'https://njslab23-fe.onrender.com'],
                 methods: ['GET', 'POST'],
                 allowedHeaders: ['Content-Type', 'Authorization'],
                 credentials: true
